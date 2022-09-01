@@ -140,6 +140,7 @@ section {
 .flag {
     margin-left: 0.5em;
     width: 40px;
+    border: 0.4px solid rgba(0, 0, 0, 0.099);
 }
 
 .name {
