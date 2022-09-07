@@ -6,6 +6,8 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
     min-width: 100vw;
@@ -54,12 +56,12 @@ a {
     text-decoration: none;
     color: white;
     font-weight: 600;
-    transition: all 100ms;
+    transition: all 250ms;
 }
 
 a:hover {
-    color: #efb507;
-    font-size: 1.1rem;
+    color: #ffc927;
+    /* color: #efb507; */
 }
 
 .about {
@@ -68,11 +70,19 @@ a:hover {
     justify-self: flex-end;
     margin-right: 2em;
 }
+/* /////////////////////////////////////////////////////////////////////////////// */
+.body-container {
+    height: 88.5vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 
 .copa {
-    position: absolute;
-    right: 230px;
-    top: 250px;
+    width: fit-content;
     animation: traslacion 2s ease-in-out infinite forwards alternate;
 }
 
@@ -81,29 +91,26 @@ a:hover {
         transform: translateY(0px);
     }
     100%{
-        transform: translateY(-40px);
+        transform: translateY(40px);
     }
 }
 
 .fifaWorldCup {
-    width: 500px;
+    width:27rem;
 }
 
 .video {
-    position: absolute;
-    top: 260px;
-    left: 140px;
+    width: fit-content;
 }
 
 iframe {
     width: 840px;
     height: 473px;
 }
+/* /////////////////////////////////////////////////////////////////////////////// */
 
 
 footer {
-    position: absolute;
-    bottom: 0;
     width: 100vw;
     background-color: #ce9d33;
     height: 30px;
@@ -115,26 +122,81 @@ footer div {
     margin-left: 0.5em;
 }
 
- /*////////////////////////////////// 1366 x 768 ///////////////////////////////////*/
+ /*////////////////////////////////// 1500px ///////////////////////////////////*/
+ 
+ @media (max-width: 1500px)  {
+     iframe {
+         width: 604px;
+         height: 338px;
+        }
+        
+        .fifaWorldCup {
+            width: 430px;
+        }
+        
+        .copa {
+            
+        }
+        
+        .video {
+            
+        }
+    }
+    
+  /*////////////////////////////////// 1300 ///////////////////////////////////*/
 
-@media (max-width: 1366px)  {
+@media (max-width: 1300px)  {
+    .body-container {
+        height: 89vh;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+    }
+
     iframe {
-        width: 504px;
-        height: 282px;
+        width: 604px;
+        height: 338px;
     }
 
     .fifaWorldCup {
-        width: 380px;
+        width: 400px;
     }
 
     .copa {
-        right: 180px;
-        top: 200px;
+        width: fit-content;
+        animation: none;
     }
 
     .video {
-        position: absolute;
-        top: 245px;
-        left: 120px;
+
+    }
+}
+
+  /*////////////////////////////////// 1100 ///////////////////////////////////*/
+
+@media (max-width: 1100px)  {
+    .body-container {
+        height: 89vh;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+    }
+
+    iframe {
+        width: 504px;
+        height: 238px;
+    }
+
+    .fifaWorldCup {
+        width: 320px;
+    }
+
+    .copa {
+        width: fit-content;
+        animation: none;
+    }
+
+    .video {
+
     }
 }
